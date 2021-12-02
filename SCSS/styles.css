@@ -1,0 +1,54 @@
+/* PRIMARY COLORS */
+/* NEUTRALS */
+:root {
+  background-color: #0f1424;
+  font-size: 18px;
+  color: #6f76c8;
+  padding: 0;
+  margin: 0;
+}
+
+/* Profile */
+.top-container {
+  padding-top: 20%;
+}
+.top-container .profile {
+  width: 325px;
+  height: 132px;
+  border-radius: 15px;
+  background-color: #5847eb;
+  margin: 0 auto;
+  z-index: 1;
+  position: absolute;
+  right: 25px;
+}
+.top-container .views {
+  width: 325px;
+  height: 200px;
+  border-radius: 15px;
+  background-color: #1c1f4a;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+.tracker-container .tracker .tracker-header {
+  width: 325px;
+  height: 160px;
+  border-radius: 15px;
+  background-color: #ff8c66;
+  margin: 26px auto;
+  z-index: -1;
+}
+.tracker-container .tracker .tracker-body {
+  position: absolute;
+  right: 25px;
+  bottom: 69px;
+  width: 325px;
+  height: 123px;
+  background-color: #1c1f4a;
+  border-radius: 15px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=styles.css.map */
