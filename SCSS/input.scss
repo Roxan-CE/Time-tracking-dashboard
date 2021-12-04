@@ -12,63 +12,92 @@ $neutral_darkestBlue: #0f1424;
 $neutral_darkBlue: #1c1f4a;
 $neutral_desatBlue: #6f76c8;
 $neutral_paleBlue: #bdc1ff;
-
+/* MIXINS */
 :root {
   background-color: $neutral_darkestBlue;
   font-size: 18px;
   color: $neutral_desatBlue;
   padding: 0;
   margin: 0;
-}
-/* Profile */
-.top-container {
-  padding-top: 20%;
 
-  .profile {
-    width: 325px;
-    height: 132px;
-    border-radius: 15px;
-    background-color: $primary_blue;
-    margin: 0 auto;
-    z-index: 1;
-    position: absolute;
-    right: 25px;
-  }
+  body {
+    background-color: transparent;
 
-  .views {
-    width: 325px;
-    height: 200px;
-    border-radius: 15px;
-    background-color: $neutral_darkBlue;
-    margin: 0 auto;
-    z-index: -1;
-  }
-}
+    .container {
+      padding-top: 20%;
 
-.tracker-container {
+      .row {
+        .main-nav {
+          padding: 14px;
 
-  .tracker {
+          .views {
+            width: 325px;
+            height: 200px;
+            border-radius: 15px;
+            background-color: $neutral_darkBlue;
+            margin: 0 auto;
+            position: relative;
+          }
 
-    .tracker-header {
-      width: 325px;
-      height: 160px;
-      border-radius: 15px;
-      background-color: $primary_work;
-      margin: 26px auto;
-      z-index: -1;
+          .profile {
+            width: 325px;
+            height: 132px;
+            border-radius: 15px;
+            background-color: $primary_blue;
+            margin: 0 auto;
+            position: absolute;
+          }
+        }
+
+        .tracker {
+          padding: 10px;
+
+          .tracker-header {
+            width: 325px;
+            height: 160px;
+            border-radius: 15px;
+            background-color: $primary_work;
+            margin: 0 auto;
+            z-index: -1;
+            position: relative;
+
+            .tracker-body {
+              position: absolute;
+              bottom: 0;
+              width: 325px;
+              height: 123px;
+              background-color: $neutral_darkBlue;
+              border-radius: 15px;
+              margin: 0 auto;
+              z-index: 1;
+            }
+          }
+
+          #work {
+            background-color: $primary_work;
+          }
+
+          #play {
+            background-color: $primary_play;
+          }
+
+          #study {
+            background-color: $primary_study;
+          }
+
+          #exercise {
+            background-color: $primary_exercise;
+          }
+
+          #self-care {
+            background-color: $primary_selfCare;
+          }
+
+          #social {
+            background-color: $primary_social;
+          }
+        }
+      }
     }
-
-    .tracker-body {
-      position: absolute;
-      right: 25px;
-      bottom: 69px;
-      width: 325px;
-      height: 123px;
-      background-color: $neutral_darkBlue;
-      border-radius: 15px;
-      margin: 0 auto;
-      z-index: 1;
-    }
-
   }
 }

@@ -1,5 +1,6 @@
 /* PRIMARY COLORS */
 /* NEUTRALS */
+/* MIXINS */
 :root {
   background-color: #0f1424;
   font-size: 18px;
@@ -7,48 +8,70 @@
   padding: 0;
   margin: 0;
 }
-
-/* Profile */
-.top-container {
+:root body {
+  background-color: transparent;
+}
+:root body .container {
   padding-top: 20%;
 }
-.top-container .profile {
-  width: 325px;
-  height: 132px;
-  border-radius: 15px;
-  background-color: #5847eb;
-  margin: 0 auto;
-  z-index: 1;
-  position: absolute;
-  right: 25px;
+:root body .container .row .main-nav {
+  padding: 14px;
 }
-.top-container .views {
+:root body .container .row .main-nav .views {
   width: 325px;
   height: 200px;
   border-radius: 15px;
   background-color: #1c1f4a;
   margin: 0 auto;
-  z-index: -1;
+  position: relative;
 }
-
-.tracker-container .tracker .tracker-header {
+:root body .container .row .main-nav .profile {
+  width: 325px;
+  height: 132px;
+  border-radius: 15px;
+  background-color: #5847eb;
+  margin: 0 auto;
+  position: absolute;
+}
+:root body .container .row .tracker {
+  padding: 10px;
+}
+:root body .container .row .tracker .tracker-header {
   width: 325px;
   height: 160px;
   border-radius: 15px;
   background-color: #ff8c66;
-  margin: 26px auto;
+  margin: 0 auto;
   z-index: -1;
+  position: relative;
 }
-.tracker-container .tracker .tracker-body {
+:root body .container .row .tracker .tracker-header .tracker-body {
   position: absolute;
-  right: 25px;
-  bottom: 69px;
+  bottom: 0;
   width: 325px;
   height: 123px;
   background-color: #1c1f4a;
   border-radius: 15px;
   margin: 0 auto;
   z-index: 1;
+}
+:root body .container .row .tracker #work {
+  background-color: #ff8c66;
+}
+:root body .container .row .tracker #play {
+  background-color: #56c2e6;
+}
+:root body .container .row .tracker #study {
+  background-color: #ff5c7c;
+}
+:root body .container .row .tracker #exercise {
+  background-color: #4acf81;
+}
+:root body .container .row .tracker #self-care {
+  background-color: #f1c65b;
+}
+:root body .container .row .tracker #social {
+  background-color: #7536d3;
 }
 
 /*# sourceMappingURL=styles.css.map */
