@@ -1,21 +1,56 @@
 /* PRIMARY COLORS */
 /* NEUTRALS */
 /* MIXINS */
+/* FONT-SIZES */
+h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #FFF;
+}
+
+h2 {
+  font-weight: 300;
+  color: #FFF;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding: 0 7% 0 9%;
+  color: #6f76c8;
+}
+
+h4 {
+  font-size: 1.1rem;
+  color: #FFF;
+}
+
+p {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/** CUSTOM CSS**/
 :root {
   background-color: #0f1424;
-  font-size: 18px;
-  color: #6f76c8;
   padding: 0;
   margin: 0;
 }
 :root body {
   background-color: transparent;
+  font-family: "Rubik", sans-serif;
+  color: #bdc1ff;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
 }
 :root body .container {
-  padding-top: 20%;
+  padding-top: 18%;
 }
 :root body .container .row .main-nav {
-  padding: 14px;
+  padding: 10px;
+  display: flex;
 }
 :root body .container .row .main-nav .views {
   width: 325px;
@@ -32,9 +67,48 @@
   background-color: #5847eb;
   margin: 0 auto;
   position: absolute;
+  display: inline-flex;
+}
+:root body .container .row .main-nav .profile .profile-pic {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+:root body .container .row .main-nav .profile .profile-pic img {
+  width: 80%;
+  height: auto;
+  align-self: center;
+  padding: 12%;
+  --stroke-pos: 1px;
+  --stroke-neg: -1px;
+  --stroke-color: white;
+  filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color)) drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
+}
+:root body .container .row .main-nav .profile .profile-text {
+  width: 65%;
+}
+:root body .container .row .main-nav .profile .profile-text p {
+  padding: 20% 0 0;
+  margin: 0;
+  font-weight: 400;
+}
+:root body .container .row .main-nav .profile .profile-text h2 {
+  margin: 0;
+  padding: 1% 0 0;
+}
+:root body .container .row .main-nav .change-view {
+  position: absolute;
+  width: 100%;
+  bottom: 6%;
+  display: inline-flex;
+  padding: 0 2 0 0%;
+  justify-content: center;
+}
+:root body .container .row .main-nav .change-view h3 {
+  padding: 0 7% 0 9%;
 }
 :root body .container .row .tracker {
-  padding: 10px;
+  padding: 3.5%;
 }
 :root body .container .row .tracker .tracker-header {
   width: 325px;
@@ -44,6 +118,12 @@
   margin: 0 auto;
   z-index: -1;
   position: relative;
+  overflow: hidden;
+}
+:root body .container .row .tracker .tracker-header .tracker-icon {
+  position: absolute;
+  right: 16px;
+  top: -12px;
 }
 :root body .container .row .tracker .tracker-header .tracker-body {
   position: absolute;
@@ -54,6 +134,16 @@
   border-radius: 15px;
   margin: 0 auto;
   z-index: 1;
+  display: flex;
+}
+:root body .container .row .tracker .tracker-header .tracker-body .current {
+  width: 40%;
+}
+:root body .container .row .tracker .tracker-header .tracker-body .previous {
+  width: 60%;
+}
+:root body .container .row .tracker .tracker-header .tracker-body .previous p {
+  color: #bdc1ff;
 }
 :root body .container .row .tracker #work {
   background-color: #ff8c66;
