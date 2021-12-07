@@ -17,7 +17,6 @@ h2 {
 h3 {
   font-weight: 300;
   font-size: 1.2rem;
-  padding: 0 7% 0 9%;
   color: #6f76c8;
 }
 
@@ -29,6 +28,7 @@ h4 {
 p {
   font-size: 0.9rem;
   font-weight: 300;
+  letter-spacing: 0.5px;
 }
 
 /** CUSTOM CSS**/
@@ -49,11 +49,11 @@ p {
   padding-top: 18%;
 }
 :root body .container .row .main-nav {
-  padding: 10px;
+  padding: 0;
   display: flex;
 }
 :root body .container .row .main-nav .views {
-  width: 325px;
+  min-width: 325px;
   height: 200px;
   border-radius: 15px;
   background-color: #1c1f4a;
@@ -101,7 +101,7 @@ p {
   width: 100%;
   bottom: 6%;
   display: inline-flex;
-  padding: 0 2 0 0%;
+  padding: 0 2%;
   justify-content: center;
 }
 :root body .container .row .main-nav .change-view h3 {
@@ -123,7 +123,6 @@ p {
 :root body .container .row .tracker .tracker-header .tracker-icon {
   position: absolute;
   right: 16px;
-  top: -12px;
 }
 :root body .container .row .tracker .tracker-header .tracker-body {
   position: absolute;
@@ -134,34 +133,203 @@ p {
   border-radius: 15px;
   margin: 0 auto;
   z-index: 1;
-  display: flex;
 }
 :root body .container .row .tracker .tracker-header .tracker-body .current {
-  width: 40%;
+  padding: 9% 7% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+:root body .container .row .tracker .tracker-header .tracker-body .current .ellipsis {
+  align-self: center;
+  padding-bottom: 3%;
 }
 :root body .container .row .tracker .tracker-header .tracker-body .previous {
-  width: 60%;
+  padding: 0 7%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 :root body .container .row .tracker .tracker-header .tracker-body .previous p {
   color: #bdc1ff;
+  padding-top: 3%;
 }
 :root body .container .row .tracker #work {
   background-color: #ff8c66;
 }
+:root body .container .row .tracker #work .tracker-icon {
+  top: -12px;
+}
 :root body .container .row .tracker #play {
   background-color: #56c2e6;
+}
+:root body .container .row .tracker #play .tracker-icon {
+  top: -5px;
 }
 :root body .container .row .tracker #study {
   background-color: #ff5c7c;
 }
+:root body .container .row .tracker #study .tracker-icon {
+  top: -5px;
+}
 :root body .container .row .tracker #exercise {
   background-color: #4acf81;
+}
+:root body .container .row .tracker #exercise .tracker-icon {
+  top: -2px;
+}
+:root body .container .row .tracker #social {
+  background-color: #7536d3;
+}
+:root body .container .row .tracker #social .tracker-icon {
+  top: -15px;
 }
 :root body .container .row .tracker #self-care {
   background-color: #f1c65b;
 }
-:root body .container .row .tracker #social {
-  background-color: #7536d3;
+:root body .container .row .tracker #self-care .tracker-icon {
+  top: -10px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 768px) {
+  :root body .container {
+    margin: 0;
+    max-width: 1440px;
+  }
+  :root body .container .row {
+    width: 100%;
+    padding: 0 8%;
+    margin: 0;
+  }
+  :root body .container .row .main-nav {
+    padding: 0 0 0 0;
+    justify-content: flex-end;
+  }
+  :root body .container .row .main-nav .views {
+    min-width: 255px;
+    min-height: 518px;
+    margin: 0;
+  }
+  :root body .container .row .main-nav .profile {
+    width: 255px;
+    height: 354px;
+    flex-direction: column;
+  }
+  :root body .container .row .main-nav .profile .profile-pic {
+    width: 100%;
+    justify-content: left;
+    padding: 14% 0 0 14%;
+  }
+  :root body .container .row .main-nav .profile .profile-pic img {
+    width: 36%;
+    padding: 0;
+  }
+  :root body .container .row .main-nav .profile .profile-text {
+    width: 100%;
+    padding: 16% 0 0 14%;
+  }
+  :root body .container .row .main-nav .profile .profile-text p {
+    padding: 0 0 0;
+    margin: 0;
+  }
+  :root body .container .row .main-nav .profile .profile-text h2 {
+    font-size: 2.5rem;
+  }
+  :root body .container .row .main-nav .change-view {
+    position: absolute;
+    width: 100%;
+    bottom: 6%;
+    display: flex;
+    padding: 0 0 0 12%;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  :root body .container .row .main-nav .change-view h3 {
+    padding: 3.5% 0 0 0;
+  }
+  :root body .container .row .all-trackers .row {
+    padding: 0;
+  }
+  :root body .container .row .all-trackers .row .tracker {
+    padding: 0 10px 4% 10px;
+  }
+  :root body .container .row .all-trackers .row .tracker .tracker-header {
+    width: 255px;
+    height: 244px;
+  }
+  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-icon {
+    position: absolute;
+    right: 16px;
+  }
+  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body {
+    width: 255px;
+    height: 198px;
+  }
+  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .current {
+    padding: 11% 12% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .current .ellipsis {
+    align-self: center;
+    padding-bottom: 3%;
+  }
+  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .previous {
+    padding: 0 7%;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .previous h1 {
+    font-size: 3.5rem;
+    padding: 8% 5% 0;
+    margin: 0;
+  }
+  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .previous p {
+    color: #bdc1ff;
+    padding: 3% 5% 0;
+  }
+  :root body .container .row .all-trackers .row .tracker #work {
+    background-color: #ff8c66;
+  }
+  :root body .container .row .all-trackers .row .tracker #work .tracker-icon {
+    top: -12px;
+  }
+  :root body .container .row .all-trackers .row .tracker #play {
+    background-color: #56c2e6;
+  }
+  :root body .container .row .all-trackers .row .tracker #play .tracker-icon {
+    top: -5px;
+  }
+  :root body .container .row .all-trackers .row .tracker #study {
+    background-color: #ff5c7c;
+  }
+  :root body .container .row .all-trackers .row .tracker #study .tracker-icon {
+    top: -5px;
+  }
+  :root body .container .row .all-trackers .row .tracker #exercise {
+    background-color: #4acf81;
+  }
+  :root body .container .row .all-trackers .row .tracker #exercise .tracker-icon {
+    top: -2px;
+  }
+  :root body .container .row .all-trackers .row .tracker #social {
+    background-color: #7536d3;
+  }
+  :root body .container .row .all-trackers .row .tracker #social .tracker-icon {
+    top: -15px;
+  }
+  :root body .container .row .all-trackers .row .tracker #self-care {
+    background-color: #f1c65b;
+  }
+  :root body .container .row .all-trackers .row .tracker #self-care .tracker-icon {
+    top: -10px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
