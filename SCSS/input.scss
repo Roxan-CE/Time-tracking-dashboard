@@ -156,7 +156,6 @@ p {
               margin: 0 auto;
               z-index: 1;
 
-
               .current {
                 padding: 9% 7% 0;
                 display: flex;
@@ -168,9 +167,7 @@ p {
                 .ellipsis {
                   align-self: center;
                   padding-bottom: 3%;
-
                 }
-
               }
 
               .previous {
@@ -180,13 +177,11 @@ p {
                 display: flex;
                 justify-content: space-between;
 
-
                 h1 {}
 
                 p {
                   color: $neutral_paleBlue;
                   padding-top: 3%;
-
                 }
               }
             }
@@ -245,9 +240,7 @@ p {
   }
 }
 /* MEDIA QUERIES */
-
-@media only screen and (min-width: 768px) {
-
+@media only screen and (min-width: 600px) {
   :root {
     body {
       .container {
@@ -260,8 +253,9 @@ p {
           margin: 0;
 
           .main-nav {
-            padding: 0 0 0 0;
+            padding: 0;
             justify-content: flex-end;
+            width: 48%;
 
             .views {
               min-width: 255px;
@@ -290,7 +284,7 @@ p {
                 padding: 16% 0 0 14%;
 
                 p {
-                  padding: 0 0 0;
+                  padding: 0;
                   margin: 0;
                 }
 
@@ -310,19 +304,19 @@ p {
               flex-direction: column;
 
               h3 {
-                padding: 3.5% 0 0 0;
+                padding: 3.5% 0 0;
               }
             }
           }
 
           .all-trackers {
+            width: 50%;
 
             .row {
-
               padding: 0;
 
               .tracker {
-                  padding: 0 10px 4% 10px;
+                padding: 0 10px 4%;
 
                 .tracker-header {
                   width: 255px;
@@ -348,9 +342,7 @@ p {
                       .ellipsis {
                         align-self: center;
                         padding-bottom: 3%;
-
                       }
-
                     }
 
                     .previous {
@@ -360,7 +352,6 @@ p {
                       display: flex;
                       flex-direction: column;
                       justify-content: flex-end;
-
 
                       h1 {
                         font-size: 3.5rem;
@@ -424,11 +415,73 @@ p {
                   }
                 }
               }
-
             }
           }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  :root {
+    body {
+      .container {
+        .row {
+          .main-nav {
+            max-width: 60%;
+            flex: 0 0 48%;
+          }
+
+          .all-trackers {
+            max-width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  :root {
+    body {
+      .container {
+        .row {
+          .main-nav {
+            max-width: 25%;
+            flex: 0 0 10%;
+          }
+
+          .all-trackers {
+            max-width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  :root {
+    body {
+      .container {
+
+        .row {
+          padding: 0 8%;
+          justify-content: flex-center;
 
 
+          .main-nav {
+            max-width: 30%;
+            flex: 0 0 10%;
+          }
+
+          .all-trackers {
+            max-width: 80%;
+            .row {
+              .tracker {
+                flex-grow: 0;
+              }
+            }
+          }
         }
       }
     }
