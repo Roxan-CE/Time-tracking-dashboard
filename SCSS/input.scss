@@ -13,6 +13,7 @@ $neutral_desatBlue: #6f76c8;
 $neutral_paleBlue: #bdc1ff;
 /* MIXINS */
 /* FONT-SIZES */
+
 h1 {
   font-size: 2rem;
   font-weight: 300;
@@ -162,12 +163,11 @@ p {
                 flex-direction: row;
                 justify-content: space-between;
 
-                h4 {}
-
                 .ellipsis {
                   align-self: center;
                   padding-bottom: 3%;
                 }
+
               }
 
               .previous {
@@ -185,6 +185,7 @@ p {
                 }
               }
             }
+
           }
 
           #work {
@@ -235,6 +236,16 @@ p {
             }
           }
         }
+
+        .tracker:hover {
+          cursor: pointer;
+        }
+
+        .tracker:hover .tracker-body {
+          background-color: #34397b;
+          cursor: pointer;
+        }
+
       }
     }
   }
@@ -306,6 +317,15 @@ p {
               h3 {
                 padding: 3.5% 0 0;
               }
+
+              a:hover {
+                text-decoration: none;
+              }
+
+              h3:hover {
+                color: #FFF;
+              }
+
             }
           }
 
@@ -465,17 +485,46 @@ p {
       .container {
 
         .row {
+          padding: 0 1%;
+          justify-content: flex-center;
+
+
+          .main-nav {
+            max-width: 25%;
+            flex: 0 0 25%;
+          }
+
+          .all-trackers {
+            max-width: 100%;
+            .row {
+              .tracker {
+                flex-grow: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  :root {
+    body {
+      .container {
+
+        .row {
           padding: 0 8%;
           justify-content: flex-center;
 
 
           .main-nav {
-            max-width: 30%;
-            flex: 0 0 10%;
+            max-width: 25%;
+            flex: 0 0 25%;
           }
 
           .all-trackers {
-            max-width: 80%;
+            max-width: 100%;
             .row {
               .tracker {
                 flex-grow: 0;

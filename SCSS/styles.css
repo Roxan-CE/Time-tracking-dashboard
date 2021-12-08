@@ -191,6 +191,13 @@ p {
 :root body .container .row .tracker #self-care .tracker-icon {
   top: -10px;
 }
+:root body .container .row .tracker:hover {
+  cursor: pointer;
+}
+:root body .container .row .tracker:hover .tracker-body {
+  background-color: #34397b;
+  cursor: pointer;
+}
 
 /* MEDIA QUERIES */
 @media only screen and (min-width: 600px) {
@@ -249,6 +256,12 @@ p {
   }
   :root body .container .row .main-nav .change-view h3 {
     padding: 3.5% 0 0;
+  }
+  :root body .container .row .main-nav .change-view a:hover {
+    text-decoration: none;
+  }
+  :root body .container .row .main-nav .change-view h3:hover {
+    color: #FFF;
   }
   :root body .container .row .all-trackers {
     width: 50%;
@@ -355,15 +368,31 @@ p {
 }
 @media only screen and (min-width: 1200px) {
   :root body .container .row {
+    padding: 0 1%;
+    justify-content: flex-center;
+  }
+  :root body .container .row .main-nav {
+    max-width: 25%;
+    flex: 0 0 25%;
+  }
+  :root body .container .row .all-trackers {
+    max-width: 100%;
+  }
+  :root body .container .row .all-trackers .row .tracker {
+    flex-grow: 0;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  :root body .container .row {
     padding: 0 8%;
     justify-content: flex-center;
   }
   :root body .container .row .main-nav {
-    max-width: 30%;
-    flex: 0 0 10%;
+    max-width: 25%;
+    flex: 0 0 25%;
   }
   :root body .container .row .all-trackers {
-    max-width: 80%;
+    max-width: 100%;
   }
   :root body .container .row .all-trackers .row .tracker {
     flex-grow: 0;
