@@ -115,7 +115,7 @@ p {
             }
           }
 
-          .change-view {
+          .change-timeframe {
             position: absolute;
             width: 100%;
             bottom: 6%;
@@ -123,9 +123,20 @@ p {
             padding: 0 2%;
             justify-content: center;
 
-            h3 {
+            .timeframe {
               padding: 0 7% 0 9%;
             }
+
+            .timeframe:hover {
+              text-decoration: none;
+              color: #FFF;
+              cursor: pointer;
+            }
+
+            .active {
+              color: #bdc1ff;
+            }
+
           }
         }
 
@@ -136,41 +147,76 @@ p {
             width: 325px;
             height: 160px;
             border-radius: 15px;
-            background-color: $primary_work;
             margin: 0 auto;
-            z-index: -1;
             position: relative;
-            overflow: hidden;
-
-            .tracker-icon {
-              position: absolute;
-              right: 16px;
-            }
 
             .tracker-body {
-              position: absolute;
-              bottom: 0;
+              position: relative;
+              top: 38px;
               width: 325px;
               height: 123px;
               background-color: $neutral_darkBlue;
               border-radius: 15px;
               margin: 0 auto;
-              z-index: 1;
 
-              .current {
+              .title-section {
                 padding: 9% 7% 0;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
 
-                .ellipsis {
-                  align-self: center;
-                  padding-bottom: 3%;
+                .ellipsis-container {
+                  position: relative;
+                  top: -6px;
+
+
+                  .ellipsis {
+                    align-self: center;
+                    padding-bottom: 0%;
+                    fill: #bdc1ff;
+                  }
+
+                  .single-nav {
+                    position: absolute;
+                    bottom: -80px;
+                    right: 0px;
+                    background-color: $neutral_darkBlue;
+                    border: 1px solid $neutral_desatBlue;
+                    display: none;
+
+                    .single-timeframe {
+                      color: #FFFFFF;
+
+                      padding: 3px 9px;
+                      margin: 0;
+                    }
+
+                    .single-timeframe:hover {
+                      color: #FFFFFF;
+                      background-color: $neutral_desatBlue;
+                      padding: 3px 9px;
+                      margin: 0;
+                    }
+                  }
+
                 }
+
+                .ellipsis-container:hover {
+                  cursor: pointer;
+                }
+
+                .ellipsis-container:hover .ellipsis{
+                  fill: #FFFFFF;
+                }
+
+                .ellipsis-container:hover .single-nav{
+                  display: block;
+                }
+
 
               }
 
-              .previous {
+              .timeframe-section {
                 padding: 0 7%;
                 width: 100%;
                 text-align: center;
@@ -190,62 +236,52 @@ p {
 
           #work {
             background-color: $primary_work;
-
-            .tracker-icon {
-              top: -12px;
-            }
+            background-image: url("/Users/roxan/Desktop/Web_Development/time-tracking-dashboard-main/images/icon-work.svg");
+            background-position: 94% -14%;
+            background-repeat: no-repeat;
           }
 
           #play {
             background-color: $primary_play;
+            background-image: url("/Users/roxan/Desktop/Web_Development/time-tracking-dashboard-main/images/icon-play.svg");
+            background-position: 94% -8%;
+            background-repeat: no-repeat;
 
-            .tracker-icon {
-              top: -5px;
-            }
           }
 
           #study {
             background-color: $primary_study;
+            background-image: url("/Users/roxan/Desktop/Web_Development/time-tracking-dashboard-main/images/icon-study.svg");
+            background-position: 94% -10%;
+            background-repeat: no-repeat;
 
-            .tracker-icon {
-              top: -5px;
-            }
           }
 
           #exercise {
             background-color: $primary_exercise;
+            background-image: url("/Users/roxan/Desktop/Web_Development/time-tracking-dashboard-main/images/icon-exercise.svg");
+            background-position: 94% -2%;
+            background-repeat: no-repeat;
 
-            .tracker-icon {
-              top: -2px;
-            }
           }
 
           #social {
             background-color: $primary_social;
+            background-image: url("/Users/roxan/Desktop/Web_Development/time-tracking-dashboard-main/images/icon-social.svg");
+            background-position: 94% -25%;
+            background-repeat: no-repeat;
 
-            .tracker-icon {
-              top: -15px;
-            }
           }
 
           #self-care {
             background-color: $primary_selfCare;
+            background-image: url("/Users/roxan/Desktop/Web_Development/time-tracking-dashboard-main/images/icon-self-care.svg");
+            background-position: 94% -14%;
+            background-repeat: no-repeat;
 
-            .tracker-icon {
-              top: -10px;
-            }
           }
-        }
 
-        .tracker:hover {
-          cursor: pointer;
         }
-
-        .tracker:hover .tracker-body {
-          background-color: #34397b;
-          cursor: pointer;
-        }
-
       }
     }
   }
@@ -305,7 +341,7 @@ p {
               }
             }
 
-            .change-view {
+            .change-timeframe {
               position: absolute;
               width: 100%;
               bottom: 6%;
@@ -314,16 +350,14 @@ p {
               justify-content: space-evenly;
               flex-direction: column;
 
-              h3 {
+              .timeframe {
                 padding: 3.5% 0 0;
               }
 
-              a:hover {
+              .timeframe:hover {
                 text-decoration: none;
-              }
-
-              h3:hover {
                 color: #FFF;
+                cursor: pointer;
               }
 
             }
@@ -342,16 +376,13 @@ p {
                   width: 255px;
                   height: 244px;
 
-                  .tracker-icon {
-                    position: absolute;
-                    right: 16px;
-                  }
-
                   .tracker-body {
                     width: 255px;
                     height: 198px;
+                    top: 47px;
 
-                    .current {
+
+                    .title-section {
                       padding: 11% 12% 0;
                       display: flex;
                       flex-direction: row;
@@ -363,9 +394,20 @@ p {
                         align-self: center;
                         padding-bottom: 3%;
                       }
+
+                      .single-nav {
+                        bottom: -78px;
+                        right: -50px;
+
+                        .single-timeframe {
+                        }
+
+                        .single-timeframe:hover {
+                        }
+                      }
                     }
 
-                    .previous {
+                    .timeframe-section {
                       padding: 0 7%;
                       width: 100%;
                       text-align: left;
@@ -388,52 +430,33 @@ p {
                 }
 
                 #work {
-                  background-color: $primary_work;
-
-                  .tracker-icon {
-                    top: -12px;
-                  }
+                  background-position: 90% -7%;
                 }
 
                 #play {
-                  background-color: $primary_play;
-
-                  .tracker-icon {
-                    top: -5px;
-                  }
+                  background-position: 90% -3%;
                 }
 
                 #study {
-                  background-color: $primary_study;
-
-                  .tracker-icon {
-                    top: -5px;
-                  }
+                  background-position: 90% -4%;
                 }
 
                 #exercise {
-                  background-color: $primary_exercise;
+                  background-position: 90% -1%;
 
-                  .tracker-icon {
-                    top: -2px;
-                  }
                 }
 
                 #social {
-                  background-color: $primary_social;
+                  background-position: 90% -0%;
 
-                  .tracker-icon {
-                    top: -15px;
-                  }
                 }
 
                 #self-care {
-                  background-color: $primary_selfCare;
+                  background-position: 90% -6%;
 
-                  .tracker-icon {
-                    top: -10px;
-                  }
                 }
+
+
               }
             }
           }

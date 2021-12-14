@@ -96,7 +96,7 @@ p {
   margin: 0;
   padding: 1% 0 0;
 }
-:root body .container .row .main-nav .change-view {
+:root body .container .row .main-nav .change-timeframe {
   position: absolute;
   width: 100%;
   bottom: 6%;
@@ -104,8 +104,16 @@ p {
   padding: 0 2%;
   justify-content: center;
 }
-:root body .container .row .main-nav .change-view h3 {
+:root body .container .row .main-nav .change-timeframe .timeframe {
   padding: 0 7% 0 9%;
+}
+:root body .container .row .main-nav .change-timeframe .timeframe:hover {
+  text-decoration: none;
+  color: #FFF;
+  cursor: pointer;
+}
+:root body .container .row .main-nav .change-timeframe .active {
+  color: #bdc1ff;
 }
 :root body .container .row .tracker {
   padding: 3.5%;
@@ -114,89 +122,107 @@ p {
   width: 325px;
   height: 160px;
   border-radius: 15px;
-  background-color: #ff8c66;
   margin: 0 auto;
-  z-index: -1;
   position: relative;
-  overflow: hidden;
-}
-:root body .container .row .tracker .tracker-header .tracker-icon {
-  position: absolute;
-  right: 16px;
 }
 :root body .container .row .tracker .tracker-header .tracker-body {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  top: 38px;
   width: 325px;
   height: 123px;
   background-color: #1c1f4a;
   border-radius: 15px;
   margin: 0 auto;
-  z-index: 1;
 }
-:root body .container .row .tracker .tracker-header .tracker-body .current {
+:root body .container .row .tracker .tracker-header .tracker-body .title-section {
   padding: 9% 7% 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-:root body .container .row .tracker .tracker-header .tracker-body .current .ellipsis {
-  align-self: center;
-  padding-bottom: 3%;
+:root body .container .row .tracker .tracker-header .tracker-body .title-section .ellipsis-container {
+  position: relative;
+  top: -6px;
 }
-:root body .container .row .tracker .tracker-header .tracker-body .previous {
+:root body .container .row .tracker .tracker-header .tracker-body .title-section .ellipsis-container .ellipsis {
+  align-self: center;
+  padding-bottom: 0%;
+  fill: #bdc1ff;
+}
+:root body .container .row .tracker .tracker-header .tracker-body .title-section .ellipsis-container .single-nav {
+  position: absolute;
+  bottom: -80px;
+  right: 0px;
+  background-color: #1c1f4a;
+  border: 1px solid #6f76c8;
+  display: none;
+}
+:root body .container .row .tracker .tracker-header .tracker-body .title-section .ellipsis-container .single-nav .single-timeframe {
+  color: #FFFFFF;
+  padding: 3px 9px;
+  margin: 0;
+}
+:root body .container .row .tracker .tracker-header .tracker-body .title-section .ellipsis-container .single-nav .single-timeframe:hover {
+  color: #FFFFFF;
+  background-color: #6f76c8;
+  padding: 3px 9px;
+  margin: 0;
+}
+:root body .container .row .tracker .tracker-header .tracker-body .title-section .ellipsis-container:hover {
+  cursor: pointer;
+}
+:root body .container .row .tracker .tracker-header .tracker-body .title-section .ellipsis-container:hover .ellipsis {
+  fill: #FFFFFF;
+}
+:root body .container .row .tracker .tracker-header .tracker-body .title-section .ellipsis-container:hover .single-nav {
+  display: block;
+}
+:root body .container .row .tracker .tracker-header .tracker-body .timeframe-section {
   padding: 0 7%;
   width: 100%;
   text-align: center;
   display: flex;
   justify-content: space-between;
 }
-:root body .container .row .tracker .tracker-header .tracker-body .previous p {
+:root body .container .row .tracker .tracker-header .tracker-body .timeframe-section p {
   color: #bdc1ff;
   padding-top: 3%;
 }
 :root body .container .row .tracker #work {
   background-color: #ff8c66;
-}
-:root body .container .row .tracker #work .tracker-icon {
-  top: -12px;
+  background-image: url("/Users/roxan/Desktop/Web_Development/time-tracking-dashboard-main/images/icon-work.svg");
+  background-position: 94% -14%;
+  background-repeat: no-repeat;
 }
 :root body .container .row .tracker #play {
   background-color: #56c2e6;
-}
-:root body .container .row .tracker #play .tracker-icon {
-  top: -5px;
+  background-image: url("/Users/roxan/Desktop/Web_Development/time-tracking-dashboard-main/images/icon-play.svg");
+  background-position: 94% -8%;
+  background-repeat: no-repeat;
 }
 :root body .container .row .tracker #study {
   background-color: #ff5c7c;
-}
-:root body .container .row .tracker #study .tracker-icon {
-  top: -5px;
+  background-image: url("/Users/roxan/Desktop/Web_Development/time-tracking-dashboard-main/images/icon-study.svg");
+  background-position: 94% -10%;
+  background-repeat: no-repeat;
 }
 :root body .container .row .tracker #exercise {
   background-color: #4acf81;
-}
-:root body .container .row .tracker #exercise .tracker-icon {
-  top: -2px;
+  background-image: url("/Users/roxan/Desktop/Web_Development/time-tracking-dashboard-main/images/icon-exercise.svg");
+  background-position: 94% -2%;
+  background-repeat: no-repeat;
 }
 :root body .container .row .tracker #social {
   background-color: #7536d3;
-}
-:root body .container .row .tracker #social .tracker-icon {
-  top: -15px;
+  background-image: url("/Users/roxan/Desktop/Web_Development/time-tracking-dashboard-main/images/icon-social.svg");
+  background-position: 94% -25%;
+  background-repeat: no-repeat;
 }
 :root body .container .row .tracker #self-care {
   background-color: #f1c65b;
-}
-:root body .container .row .tracker #self-care .tracker-icon {
-  top: -10px;
-}
-:root body .container .row .tracker:hover {
-  cursor: pointer;
-}
-:root body .container .row .tracker:hover .tracker-body {
-  background-color: #34397b;
-  cursor: pointer;
+  background-image: url("/Users/roxan/Desktop/Web_Development/time-tracking-dashboard-main/images/icon-self-care.svg");
+  background-position: 94% -14%;
+  background-repeat: no-repeat;
 }
 
 /* MEDIA QUERIES */
@@ -245,7 +271,7 @@ p {
   :root body .container .row .main-nav .profile .profile-text h2 {
     font-size: 2.5rem;
   }
-  :root body .container .row .main-nav .change-view {
+  :root body .container .row .main-nav .change-timeframe {
     position: absolute;
     width: 100%;
     bottom: 6%;
@@ -254,14 +280,13 @@ p {
     justify-content: space-evenly;
     flex-direction: column;
   }
-  :root body .container .row .main-nav .change-view h3 {
+  :root body .container .row .main-nav .change-timeframe .timeframe {
     padding: 3.5% 0 0;
   }
-  :root body .container .row .main-nav .change-view a:hover {
+  :root body .container .row .main-nav .change-timeframe .timeframe:hover {
     text-decoration: none;
-  }
-  :root body .container .row .main-nav .change-view h3:hover {
     color: #FFF;
+    cursor: pointer;
   }
   :root body .container .row .all-trackers {
     width: 50%;
@@ -276,25 +301,26 @@ p {
     width: 255px;
     height: 244px;
   }
-  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-icon {
-    position: absolute;
-    right: 16px;
-  }
   :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body {
     width: 255px;
     height: 198px;
+    top: 47px;
   }
-  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .current {
+  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .title-section {
     padding: 11% 12% 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .current .ellipsis {
+  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .title-section .ellipsis {
     align-self: center;
     padding-bottom: 3%;
   }
-  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .previous {
+  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .title-section .single-nav {
+    bottom: -78px;
+    right: -50px;
+  }
+  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .timeframe-section {
     padding: 0 7%;
     width: 100%;
     text-align: left;
@@ -302,50 +328,32 @@ p {
     flex-direction: column;
     justify-content: flex-end;
   }
-  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .previous h1 {
+  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .timeframe-section h1 {
     font-size: 3.5rem;
     padding: 8% 5% 0;
     margin: 0;
   }
-  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .previous p {
+  :root body .container .row .all-trackers .row .tracker .tracker-header .tracker-body .timeframe-section p {
     color: #bdc1ff;
     padding: 3% 5% 0;
   }
   :root body .container .row .all-trackers .row .tracker #work {
-    background-color: #ff8c66;
-  }
-  :root body .container .row .all-trackers .row .tracker #work .tracker-icon {
-    top: -12px;
+    background-position: 90% -7%;
   }
   :root body .container .row .all-trackers .row .tracker #play {
-    background-color: #56c2e6;
-  }
-  :root body .container .row .all-trackers .row .tracker #play .tracker-icon {
-    top: -5px;
+    background-position: 90% -3%;
   }
   :root body .container .row .all-trackers .row .tracker #study {
-    background-color: #ff5c7c;
-  }
-  :root body .container .row .all-trackers .row .tracker #study .tracker-icon {
-    top: -5px;
+    background-position: 90% -4%;
   }
   :root body .container .row .all-trackers .row .tracker #exercise {
-    background-color: #4acf81;
-  }
-  :root body .container .row .all-trackers .row .tracker #exercise .tracker-icon {
-    top: -2px;
+    background-position: 90% -1%;
   }
   :root body .container .row .all-trackers .row .tracker #social {
-    background-color: #7536d3;
-  }
-  :root body .container .row .all-trackers .row .tracker #social .tracker-icon {
-    top: -15px;
+    background-position: 90% 0%;
   }
   :root body .container .row .all-trackers .row .tracker #self-care {
-    background-color: #f1c65b;
-  }
-  :root body .container .row .all-trackers .row .tracker #self-care .tracker-icon {
-    top: -10px;
+    background-position: 90% -6%;
   }
 }
 @media only screen and (min-width: 768px) {
