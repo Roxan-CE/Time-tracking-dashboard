@@ -48,7 +48,7 @@ Users should be able to:
 
 ### What I learned
 
-I learned how to use SASS in this project. I also got to use with alongside Bootstrap, though I mainly used bootstrap for the containers.
+I learned how to use SASS in this project. I also got to use it alongside Bootstrap, though I mainly used bootstrap for the containers.
 
 This was also a practice for using JQuery. I'm quite happy with the functions I created on this project. I managed to make them reusable to avoid a lot of unnecessary code repetitions. I also did a little extra function to this app. The challenge only had us update the timeframe for all modules at once, but i added a little drop down menu to be able to change the timeframe for each module individually.
 
